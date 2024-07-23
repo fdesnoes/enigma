@@ -22,6 +22,7 @@ go get github.com/emedvedev/enigma/cmd/enigma
 ```
 An alternative is to clone the github repository and compile the code on your machine:
 in the directory ./enigma/cmd/enigma, you build the GO code by running:
+
 ...
 go build .
 ...
@@ -38,6 +39,7 @@ AN example of the enigma configuration and out put is
 
 ```
 which gives the following result:
+
 ...
 Original text:
   hello world!
@@ -55,6 +57,7 @@ Enigma configuration:
 Result:
   KZTDAUQBGVK
 ...
+
 Much better! And of course, `enigma -h` will give you the complete description of
 parameters and usage.
 
