@@ -8,6 +8,8 @@ encrypts better than you"? I've got you covered! With this port of the amazing
 1940's technology you'll be just as good at encrypting things as anyone's
 grandmother.
 
+The CLI was modified by becgabri, I have added here the proper usage of the cli as well as the build procedure.
+
 ### Usage
 
 This repository contains both the CLI tool and its underlying library written in Go.
@@ -18,21 +20,41 @@ As for the CLI tool, a simple `go get` should do it:
 ```
 go get github.com/emedvedev/enigma/cmd/enigma
 ```
+An alternative is to clone the github repository and compile the code on your machine:
+in the directory ./enigma/cmd/enigma, you build the GO code by running:
+...
+go build .
+...
 
-While the full CLI syntax is a bit verbose, it's actually possible to use the tool
-without any source code modifications, config files, or Enigma knowledge:
+The new CLI format developped by becgabri requires to put the arguments between  " " as the are manages as strings.
+In the repository of the executable file you can run
+```
+./enigma -h
+```
+AN example of the enigma configuration and out put is 
 
 ```
-enigma Never gonna give you up, never gonna let you down!
-```
-
-Using an Enigma machine with default settings is somewhat similar to
-setting your password to `0000`. Let's up our security game:
+./enigma --rotors "Beta VI I III" --position "A A A A" --reflector "C" --plugboard "AD SF ET RY HK JL QZ WX UM OP" --rings "10 5 16 10" "hello world!"
 
 ```
-enigma youtu.be/dQw4w9WgXcQ --rotors Beta VI I III --reflector C-Thin --plugboard AD SF ET RY HK JL QZ WX UM OP --rings 10 5 16 10
-```
+which gives the following result:
+...
+Original text:
+  hello world!
 
+Processed original text:
+  HELLOWORLDX
+
+Enigma configuration:
+  Rotors: Beta VI I III
+  Rotor positions: A A A A
+  Rings: 10 5 16 10
+  Plugboard: AD SF ET RY HK JL QZ WX UM OP
+  Reflector: C
+
+Result:
+  KZTDAUQBGVK
+...
 Much better! And of course, `enigma -h` will give you the complete description of
 parameters and usage.
 
