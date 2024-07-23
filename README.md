@@ -1,7 +1,21 @@
 # Enigma cipher machine emulator
 
 ![](https://www.dropbox.com/s/5wb3u29ybxrzphl/Screenshot%202016-11-25%2015.34.47.png?dl=1)
+Original text:
+  hello world!
 
+Processed original text:
+  HELLOWORLDX
+
+Enigma configuration:
+  Rotors: Beta VI I III
+  Rotor positions: A A A A
+  Rings: 10 5 16 10
+  Plugboard: AD SF ET RY HK JL QZ WX UM OP
+  Reflector: C
+
+Result:
+  KZTDAUQBGVK
 This is a neat little emulator of various Enigma machines with a lot of
 confugurable parameters. Somebody hurt your feelings by saying "my grandmother
 encrypts better than you"? I've got you covered! With this port of the amazing
@@ -15,17 +29,18 @@ The CLI was modified by becgabri, I have added here the proper usage of the cli 
 This repository contains both the CLI tool and its underlying library written in Go.
 The library is documented on [GoDoc](https://godoc.org/github.com/emedvedev/enigma).
 
-As for the CLI tool, a simple `go get` should do it:
+As for the CLI tool, a simple `go get` could do it:
 
 ```
 go get github.com/emedvedev/enigma/cmd/enigma
 ```
-An alternative is to clone the github repository and compile the code on your machine:
+An alternative (I recommand) is to clone the github repository and compile the code on your machine:
 in the directory ./enigma/cmd/enigma, you build the GO code by running:
 
-...
+```
 go build .
-...
+
+```
 
 The new CLI format developped by becgabri requires to put the arguments between  " " as the are manages as strings.
 In the repository of the executable file you can run
@@ -41,7 +56,7 @@ An example of the enigma configuration and out put is
 
 which gives the following result:
 
-...
+```
 
 Original text:
   hello world!
@@ -59,7 +74,7 @@ Enigma configuration:
 Result:
   KZTDAUQBGVK
   
-...
+```
 
 Much better! And of course, `enigma -h` will give you the complete description of
 parameters and usage.
@@ -83,7 +98,21 @@ emulator:
 
 * Plugboard: any number of letter pairs is accepted. Plugboard configuration
   is optional.
+Original text:
+  hello world!
 
+Processed original text:
+  HELLOWORLDX
+
+Enigma configuration:
+  Rotors: Beta VI I III
+  Rotor positions: A A A A
+  Rings: 10 5 16 10
+  Plugboard: AD SF ET RY HK JL QZ WX UM OP
+  Reflector: C
+
+Result:
+  KZTDAUQBGVK
 * Ring offsets and starting position of the rotors.
 
 M3 and M4 can be fully emulated with the right parameters, and if it's
