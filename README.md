@@ -32,15 +32,17 @@ In the repository of the executable file you can run
 ```
 ./enigma -h
 ```
-AN example of the enigma configuration and out put is 
+An example of the enigma configuration and out put is 
 
 ```
 ./enigma --rotors "Beta VI I III" --position "A A A A" --reflector "C" --plugboard "AD SF ET RY HK JL QZ WX UM OP" --rings "10 5 16 10" "hello world!"
 
 ```
+
 which gives the following result:
 
 ...
+
 Original text:
   hello world!
 
@@ -56,6 +58,7 @@ Enigma configuration:
 
 Result:
   KZTDAUQBGVK
+  
 ...
 
 Much better! And of course, `enigma -h` will give you the complete description of
