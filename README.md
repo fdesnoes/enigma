@@ -1,21 +1,7 @@
 # Enigma cipher machine emulator
 
 ![](https://www.dropbox.com/s/5wb3u29ybxrzphl/Screenshot%202016-11-25%2015.34.47.png?dl=1)
-Original text:
-  hello world!
 
-Processed original text:
-  HELLOWORLDX
-
-Enigma configuration:
-  Rotors: Beta VI I III
-  Rotor positions: A A A A
-  Rings: 10 5 16 10
-  Plugboard: AD SF ET RY HK JL QZ WX UM OP
-  Reflector: C
-
-Result:
-  KZTDAUQBGVK
 This is a neat little emulator of various Enigma machines with a lot of
 confugurable parameters. Somebody hurt your feelings by saying "my grandmother
 encrypts better than you"? I've got you covered! With this port of the amazing
